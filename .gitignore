@@ -1,3 +1,6 @@
+.picowgo
+*.h5
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -66,4 +69,3 @@ venv*
 
 # further build artifacts
 lockfiles/
-
