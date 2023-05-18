@@ -11,5 +11,14 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
-    }
+    },
+    "python.analysis.typeshedPaths": [
+        ".vscode/Pico-W-Stub"
+    ],
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.extraPaths": [
+        ".vscode/Pico-W-Stub/stubs"
+    ],
+    "picowgo.syncFolder": "src/lunchbox/pico",
+    "picowgo.openOnStart": true
 }
