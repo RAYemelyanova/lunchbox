@@ -1,6 +1,7 @@
 from typing import Optional
 
 import numpy as np
+import numpy.typing as npt
 from ophyd import SignalRO
 from picamera import PiCamera
 
@@ -21,7 +22,9 @@ class Camera(SignalRO):
         self.camera.iso = 120
         self.camera.zoom = (0.2, 0.1, 0.8, 0.8)
 
-    def get(self) -> np.ndarray:
+    def get(
+        self,
+    ) -> npt.NDArray[np.uint8]:
         image = np.empty((FULL_H, FULL_W, 3), dtype=np.uint8)
         assert self.camera, "cannot get image; camera has not been made."
         self.camera.capture(image, "rgb")
