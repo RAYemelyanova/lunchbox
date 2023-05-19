@@ -5,12 +5,20 @@ from bluesky.plans import scan
 from bluesky.run_engine import RunEngine
 from ophyd import EpicsSignal
 
+from lunchbox.bluesky import Consumer
 from lunchbox.devices.lunchbox import LunchBox
 
 lunchbox = LunchBox(name="lunchbox")
 servo = EpicsSignal("LUNCHBOX:SERVO:RBV", "LUNCHBOX:SERVO", timeout=0.2)
 
 servo.wait_for_connection()
+
+
+def print_func():
+    print("event done!")
+
+
+consumer = Consumer(print_func)
 
 
 def scan_diffraction():
@@ -21,4 +29,5 @@ def scan_diffraction():
 
 
 RE = RunEngine()
-RE(scan_diffraction(), lambda name, doc: pprint({"name": name, "doc": doc}))
+RE.subscribe(consumer)
+RE(scan_diffraction())
