@@ -23,7 +23,6 @@ class Camera(SignalRO):
 
     def get(self) -> np.ndarray:
         image = np.empty((FULL_H, FULL_W, 3), dtype=np.uint8)
-
         assert self.camera, "cannot get image; camera has not been made."
         self.camera.capture(image, "rgb")
         return image
