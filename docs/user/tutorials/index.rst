@@ -1,8 +1,15 @@
-User Guide
-==========
+Diffraction Experiment
+======================
 
-Documentation is split into four categories, also accessible from links in the
-side-bar.
+This tutorial takes you through step-by-step how to setup the hardware and
+software components of this lunchbox beamline to run a diffraction experiment.
+By the end of it, you will be able to see a plotted diagram of the results
+of your scan, showing you how the distances between diffraction spots change
+with increasing angle.
+
+To follow along, make sure to read the how-to/follow-tutorial page if you are
+unsure about how git works. We will walk through several git commits
+representing different stages of development of the project.
 
 .. grid:: 2
     :gutter: 4
@@ -58,8 +65,3 @@ side-bar.
         +++
 
         Technical reference material including APIs and release notes.
-
-.. toctree::
-    :hidden:
-
-    diffraction-experiment/index
