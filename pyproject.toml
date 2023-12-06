@@ -25,6 +25,7 @@ dependencies = [
     "h5py",
     "picamera",
     "matplotlib",
+    "pigpio",
 ]
 dynamic = ["version"]
 license.file = "LICENSE"
@@ -47,6 +48,7 @@ dev = [
     "sphinx-design",
     "tox-direct",
     "types-mock",
+    "scikit-image",
 ]
 
 [project.scripts]
