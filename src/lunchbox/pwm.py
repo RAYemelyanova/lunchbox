@@ -34,7 +34,7 @@ class Servo:
 
 
 class Laser:
-    """Control the laser brightness using a given frequency."""
+    """Control the laser brightness using a given frequency."""
     def __init__(self, frequency: int) -> None:
         self.pi = pigpio.pi()
         self.frequency = frequency
