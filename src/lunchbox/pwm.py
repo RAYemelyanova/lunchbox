@@ -8,12 +8,16 @@ pi = pigpio.pi()
 if not pi.connected:
     raise RuntimeError("Cannot connect pi to pigpio")
 
+
 class Servo:
     """Control the servo angle, using pulse width values that match known angles.
 
     Angle can be in either radians or degrees as long as it is consistent.
     """
-    def __init__(self, min_pw: int, max_pw:int, min_angle: float, max_angle: float) -> None:
+
+    def __init__(
+        self, min_pw: int, max_pw: int, min_angle: float, max_angle: float
+    ) -> None:
         self.minimum_pulsewidth = min_pw
         self.maximum_pulsewidth = max_pw
         self.min_angle = min_angle
@@ -35,6 +39,7 @@ class Servo:
 
 class Laser:
     """Control the laser brightness using a given frequency."""
+
     def __init__(self, frequency: int) -> None:
         self.pi = pigpio.pi()
         self.frequency = frequency
@@ -53,4 +58,3 @@ class Laser:
     def set(self, duty_cycle: int) -> None:
         """Set laser intensity, with duty_cycle between 0 and 100."""
         self.pi.set_PWM_dutycycle(LED_CHANNEL, duty_cycle)
-

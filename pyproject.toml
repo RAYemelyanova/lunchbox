@@ -23,7 +23,6 @@ dependencies = [
     "opencv-contrib-python",
     "imutils",
     "h5py",
-    "picamera",
     "matplotlib",
     "pigpio",
 ]
