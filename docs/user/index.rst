@@ -13,24 +13,25 @@ side-bar.
             :caption: Tutorials
             :maxdepth: 1
 
-            tutorials/installation
+            tutorials/index
 
         +++
 
-        Tutorials for installation and typical usage. New users start here.
+        In depth tutorials on how the lunchbox works, from the hardware layer to the software.
 
     .. grid-item-card:: :material-regular:`directions;3em`
 
         .. toctree::
-            :caption: How-to Guides
+            :caption: How-to
             :maxdepth: 1
 
-            how-to/run-container
             how-to/setup-hardware
+            how-to/install
+            how-to/run-experiment
 
         +++
 
-        Practical step-by-step guides for the more experienced user.
+        Practical guides to start using the lunchbox. New users start here.
 
     .. grid-item-card:: :material-regular:`info;3em`
 
@@ -62,4 +63,4 @@ side-bar.
 .. toctree::
     :hidden:
 
-    diffraction-experiment/index
+    tutorials/index
