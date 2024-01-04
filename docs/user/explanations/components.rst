@@ -20,10 +20,10 @@ raspberry pi camera plugs directly into the raspberry pi, on which all future
 processing can be done (even if sometimes a bit slowly...). 
 
 The pico can be booted with micropython, a lightweight implementation of python
-that runs on microcontrollers, which will look for a `main.py` file on the pico
+that runs on microcontrollers, which will look for a ``main.py`` file on the pico
 and run it on startup. The pico is connected to the raspberry pi via USB, over
 which it can accept binary strings to execute commands. For this reason, in the
-final product of this lunchbox, the `main.py` file continually waits for input
+final product of this lunchbox, the ``main.py`` file continually waits for input
 and alters the laser brightness / servo angle in response. This python file is
 meant to simulate hardware stimuli in the real-world.
 
@@ -32,7 +32,7 @@ EPICs
 -----
 
 EPICs exposes the ways by which the servo and laser states are altered via
-`caget` and `caput` calls. This is done through the help of `pythonSoftIoc`,
+``caget`` and ``caput`` calls. This is done through the help of ``pythonSoftIoc``,
 which sets up callback functions that run on any such calls.
 
 

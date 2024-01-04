@@ -25,6 +25,7 @@ dependencies = [
     "h5py",
     "picamera",
     "matplotlib",
+    "rpi_hardware_pwm",
 ]
 dynamic = ["version"]
 license.file = "LICENSE"

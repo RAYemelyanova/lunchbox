@@ -25,15 +25,16 @@ side-bar.
             :caption: How-to Guides
             :maxdepth: 1
 
-            how-to/contribute
-            how-to/build-docs
+            how-to/run-container
+            how-to/test-container
             how-to/run-tests
+            how-to/build-docs
             how-to/static-analysis
             how-to/lint
             how-to/update-tools
             how-to/make-release
+            how-to/contribute
             how-to/pin-requirements
-            how-to/test-container
 
         +++
 
